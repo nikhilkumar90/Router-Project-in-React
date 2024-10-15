@@ -1,9 +1,10 @@
 import React from 'react'
 import { Navigate } from 'react-router-dom'
+import Deshboard from '../pages/Deshboard'
 
-const PrivateRoute = ({isLoggedIn, children}) => {
+const PrivateRoute = ({isLoggedIn,setIsLoggedIn}) => {
  if(isLoggedIn){
-    return children
+    return <Deshboard setIsLoggedIn = {setIsLoggedIn}/>
  }
 
  else{

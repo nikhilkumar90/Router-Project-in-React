@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from "../assets/Logo.svg"
-import {Link} from "react-router-dom"
+import {NavLink,Link} from "react-router-dom"
 import  {toast} from "react-hot-toast";
  
 const Navbar = (props) => {
@@ -11,7 +11,7 @@ const Navbar = (props) => {
 
 
   return (
-    <div className='flex justify-between items-center w-11/12 max-w-[1160px] py-4 mx-auto'>
+    <div className='flex h-14 items-center justify-between px-20 bg-richblack-800  w-full border-b-[1px] border-b-richblack-700 transition-all duration-200'>
 
     <Link to = "/">
         <img src={logo} alt='Logo' width={160} height={32} loading='lazy'/>
@@ -20,13 +20,19 @@ const Navbar = (props) => {
     <nav>
         <ul className='flex gap-x-6 text-richblack-100'>
             <li>
-                <Link to = "/" >Home</Link>
+                <NavLink to = "/" >Home</NavLink>
             </li>
             <li>
-                <Link to = "/">About</Link>
+                <NavLink to = "/course" >Courses</NavLink>
             </li>
             <li>
-                <Link to= "/">Contact</Link>
+                <NavLink to = "/about">About Us</NavLink>
+            </li>
+            <li>
+                <NavLink to = "/testimonialpage">Testimonials</NavLink>
+            </li>
+            <li>
+                <NavLink to= "/contact">Contact Us</NavLink>
             </li>
         </ul>
     </nav>
